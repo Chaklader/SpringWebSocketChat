@@ -1,0 +1,41 @@
+<div class="chat_messenger">
+    <div class="chat_messages">
+        <div class="add_friends" ng-show="showFriendsSearch">
+            <div class="share">
+                <span ng-repeat="friend in friendsToAdd">
+                    <span class="friend_to_add">
+                        {{friend}}
+                        <a href="#" class="fa fa-close" ng-click="removeFriend(friend)"></a>
+                    </span>
+                </span>
+            </div>
+            <div>
+                <input type="text" class="name-filter-control" ng-model="nameFilter" placeholder="Search"
+                       ng-change="filterFriends()"/>
+                <input type="button" class="" value="Done" ng-click="doneAddFriend()"/>
+            </div>
+            <div class="dropdown open">
+                <ul class="dropdown-menu" ng-show="nameFilter != ''">
+                    <li ng-repeat="friend in filteredFriends | orderBy:['-online'] | limitTo:maxFriendsInList">
+                        <a href="#" ng-click="addFriend(friend.username)">{{friend.username}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div ng-repeat="message in messages">
+            <small print-chat-message></small>
+        </div>
+    </div>
+    <div class="chat_new_message">
+        <input type="text" class="" ng-model="newMessage"
+               placeholder="Write your message and hit enter..."
+               ng-keyup="$event.keyCode == 13 ? sendMessage($event) : startTyping()"/>
+        <input type="button" class="attach_btn" ng-click="showAttach = !showAttach"/>
+
+    </div>
+    <div class="attach-file open" ng-show="showAttach" style=" padding: 2px 10px; position: absolute;">
+        <div class="dropdown-menu">
+            <input type="file" id="file" name="file" onchange="angular.element(this).scope().fileNameChanged(this)"/>
+        </div>
+    </div>
+</div>

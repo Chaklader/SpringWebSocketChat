@@ -1,0 +1,97 @@
+.login_page.container {
+  width: 970px;
+}
+
+.navbar h1 {
+	margin-top: 15px;
+	font-size: 22px;
+	float:left;
+	color: #fff;
+}
+
+.chat-box {
+	/*height:600px;*/
+
+}
+
+.participant_line {
+	width: 270px;
+}
+
+.part_info{
+	display: block;
+	float:left;
+	width: 250px;
+}
+.part_online {
+	display: block;
+	float:left;
+}
+
+.forum-chat-messages {
+	height: 500px;
+	overflow: auto;
+}
+
+.online_mark {
+	background: rgb(66, 183, 42); border-radius: 50%; display: inline-block; height: 7px; margin-left: 4px; width: 7px;
+}
+
+.chat_messenger .chat_messages {
+	height: 324px;
+	border-bottom: 2px solid #bdc3c7;
+	overflow: auto;
+}
+
+.chat_messenger .chat_new_message input[type="text"] {
+	border: none;
+	/*border-radius: 6px;*/
+	/*box-shadow: none;*/
+	color: #34495e;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	height: 42px;
+	line-height: 1.467;
+	padding: 8px 12px;
+	width: 90%;
+	/*transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;*/
+}
+
+.participants_box {
+	width: 300px;
+	float: right;
+	padding-left: 15px;
+}
+
+.name-filter-control {
+	width: 228px;
+}
+
+.friend_search_box {
+	position: fixed;
+}
+
+.message_time {
+	color: lightblue;
+}
+
+
+.attach_btn {
+	background-image: url(/static/img/icons.png);
+	background-repeat: no-repeat;
+	background-size: 94px 648px;
+	background-position: 0 -562px;
+	border: none;
+	height: 16px;
+	position: relative;
+	transition: opacity .2s;
+	width: 16px;
+}
+
+.attach-file input {
+	display: inline;
+}
+
+.attach-file .dropdown-menu{
+	margin-top: 0;
+}
